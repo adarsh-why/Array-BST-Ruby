@@ -4,13 +4,13 @@ end
 
 def add_node current_node, new_node
     if new_node[:value] < current_node[:value]
-        if current_node[:left] == nil
+        if current_node[:left].nil?
             current_node[:left] = new_node
         else
             add_node current_node[:left], new_node
         end
     elsif new_node[:value] > current_node[:value]
-        if current_node[:right] == nil
+        if current_node[:right].nil?
             current_node[:right] = new_node
         else
             add_node current_node[:right], new_node
